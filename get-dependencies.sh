@@ -37,5 +37,9 @@ sed -i \
   main.js
 
 yarn install
-npx electron-builder -l --x64
+if [ "$ARCH" = "x86_64" ]; then
+    npx electron-builder -l --x64
+else
+    npx electron-builder -l --arm64
+fi
 mv -v artifacts/linux-unpacked/* ../AppDir/bin
