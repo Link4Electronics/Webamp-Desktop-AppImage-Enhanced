@@ -11,6 +11,8 @@ pacman -Syu --noconfirm \
     nodejs           \
     node-gyp         \
     npm              \
+    nspr             \
+    nss              \
     python           \
     yarn
 
