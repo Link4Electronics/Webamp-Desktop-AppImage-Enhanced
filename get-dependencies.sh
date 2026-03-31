@@ -43,9 +43,10 @@ if [ "$ARCH" = "x86_64" ]; then
     npx electron-builder -l --x64
 else
     pacman -S --noconfirm ruby
-    gem install fpm
+    #gem install fpm
+    gem install --no-user-install -n /usr/local/bin fpm
     export USE_SYSTEM_FPM=true
-    echo "$(ruby -e 'print Gem.user_dir')/bin" >> $GITHUB_PATH
+    #echo "$(ruby -e 'print Gem.user_dir')/bin" >> $GITHUB_PATH
     npx electron-builder -l --arm64
 fi
 mv -v artifacts/linux-unpacked/* ../AppDir/bin
