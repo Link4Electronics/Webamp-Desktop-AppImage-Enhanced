@@ -9,6 +9,7 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     nodejs   \
     node-gyp \
+    npm      \
     yarn
 
 echo "Installing debloated packages..."
@@ -26,4 +27,4 @@ echo "---------------------------------------------------------------"
 git clone https://github.com/durasj/webamp-desktop.git
 cd webamp-desktop
 yarn install
-yarn start
+npx electron-builder -l --x64
