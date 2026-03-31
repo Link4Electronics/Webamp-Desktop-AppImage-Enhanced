@@ -25,9 +25,9 @@ get-debloated-pkgs --add-common --prefer-nano
 echo "Getting app..."
 echo "---------------------------------------------------------------"
 git clone https://github.com/durasj/webamp-desktop.git
+
+mkdir -p ./AppDir/bin
 cd webamp-desktop
 yarn install
 npx electron-builder -l --x64
-
-mkdir -p ./AppDir/bin
-mv -v artifacts/linux-unpacked/* ./AppDir/bin
+mv -v artifacts/linux-unpacked/* ../AppDir/bin
