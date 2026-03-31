@@ -10,6 +10,7 @@ pacman -Syu --noconfirm \
     nodejs   \
     node-gyp \
     npm      \
+    python   \
     yarn
 
 echo "Installing debloated packages..."
