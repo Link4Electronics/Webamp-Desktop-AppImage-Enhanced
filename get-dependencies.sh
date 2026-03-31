@@ -45,6 +45,7 @@ else
     pacman -S --noconfirm ruby
     gem install fpm
     export USE_SYSTEM_FPM=true
+    echo "$(ruby -e 'print Gem.user_dir')/bin" >> $GITHUB_PATH
     npx electron-builder -l --arm64
 fi
 mv -v artifacts/linux-unpacked/* ../AppDir/bin
