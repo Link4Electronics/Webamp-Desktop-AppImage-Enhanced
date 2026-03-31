@@ -12,7 +12,7 @@ export ICON=https://raw.githubusercontent.com/durasj/webamp-desktop/f165b34fa3f8
 export ALWAYS_SOFTWARE=1
 
 # Deploy dependencies
-quick-sharun /PATH/TO/BINARY_AND_LIBRARIES_HERE
+quick-sharun ./AppDir/bin/*
 
 # Additional changes can be done in between here
 
