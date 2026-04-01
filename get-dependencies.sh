@@ -34,7 +34,6 @@ mkdir -p ./AppDir/bin
 cd webamp-desktop
 
 sed -i \
-  -e '/protocol.interceptStreamProtocol/,/^[[:space:]]*);/c\  protocol.interceptStreamProtocol(\n    "file",\n    interceptStreamProtocol()\n  );' \
   -e 's|const { width, height } = screen.getPrimaryDisplay().workAreaSize;|// & \n  const width = 1200;\n  const height = 800;|' \
   -e 's/resizable: false/resizable: true/g' \
   -e 's/movable: false/movable: true/g' \
