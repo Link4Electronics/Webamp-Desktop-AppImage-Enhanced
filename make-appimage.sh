@@ -6,7 +6,7 @@ ARCH=$(uname -m)
 VERSION=0.3.0
 export ARCH VERSION
 export OUTPATH=./dist
-export ADD_HOOKS="self-updater.bg.hook"
+export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=https://raw.githubusercontent.com/durasj/webamp-desktop/refs/heads/master/res/icon.png
 export DEPLOY_OPENGL=1
